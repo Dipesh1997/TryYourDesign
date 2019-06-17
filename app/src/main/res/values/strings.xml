@@ -20,4 +20,24 @@
     <string name="error_permission_denied">Permission is denied.</string>
     <string name="error_permission_is_off">Permission is off.</string>
     <string name="error_image_is_off_of_frame">Image is off of the frame.</string>
+
+    <string name="clear_button">Clear Screen</string>
+    <string name="file_button">Load File</string>
+
+    <string-array name="draw_mode_array">
+        <item>Point Mode</item>
+        <item>Line Mode</item>
+        <item>Circle Mode</item>
+        <item>Polyline Mode</item>
+        <item>Rectangle Mode</item>
+        <item>Flood Fill Mode</item>
+        <item>Airbrush Mode</item>
+    </string-array>
+
+    <string-array name="minipaint_array">
+        <item>@raw/test1</item>
+        <item>@raw/hi</item>
+        <item>@raw/flower</item>
+        <item>@raw/house</item>
+    </string-array>
 </resources>
