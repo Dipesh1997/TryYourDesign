@@ -32,6 +32,7 @@
         <item>Rectangle Mode</item>
         <item>Flood Fill Mode</item>
         <item>Airbrush Mode</item>
+        <item>Polygon</item>
     </string-array>
 
     <string-array name="minipaint_array">

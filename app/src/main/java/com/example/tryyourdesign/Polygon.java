@@ -83,6 +83,7 @@ public class Polygon extends Activity implements OnItemSelectedListener
         fileResources.put("hi", R.raw.hi);
         fileResources.put("flower", R.raw.flower);
         fileResources.put("house", R.raw.house);
+        fileResources.put("polygon", R.raw.polygonc);
         fileResId = -1;
     }
 

@@ -36,6 +36,7 @@ public class MiniPaintView extends SurfaceView implements SurfaceHolder.Callback
 	public static final int RECTANGLE_MODE = 4;
 	public static final int FLOOD_FILL_MODE = 5;
 	public static final int AIRBRUSH_MODE = 6;
+	public static final int POLYGON_MODE = 7;
 
 	private static final int PIXEL_SIZE = 2; //how "big" to make each pixel; change this for debugging
 	private boolean DELAY_MODE = false; //whether to show a delay on the drawing (for debugging)
@@ -125,6 +126,19 @@ public class MiniPaintView extends SurfaceView implements SurfaceHolder.Callback
 		case AIRBRUSH_MODE:
 			airBrush(x, y);
 			break;
+            case POLYGON_MODE:
+                if(_startX < 0) { //see if we have a "first click" set of coords
+                    _startX = x;
+                    _startY = y;
+                }
+                else {
+                    drawLine(_startX, _startY, x, y);
+                    _startX = x;//update the start coordinate to be the last used point on the screen rather than resetting it to a pre-defined number, this is what allows for multiple lines
+                    _startY = y;
+                }
+
+                break;
+
 		}
 
 		return super.onTouchEvent(event); //pass up the tree, as needed
