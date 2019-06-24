@@ -119,6 +119,11 @@ public class MainActivity extends Activity {
         mv.setMode(mv.MODE_SELECT);
         mv.select_selected = false;
     }
+    public void selectPolygon(View view)
+    {
+        apd.dismiss();
+        mv.setMode(mv.MODE_POLYGON);
+    }
 
     public void clickSave(View view)
     {
@@ -135,7 +140,7 @@ class myView extends View
 
     final int MODE_FILL = 10;
     final int MODE_SELECT = 11;
-
+    final int MODE_POLYGON = 12;
     final int MAX_UNDO = 10;
 
     final float SELECT_TOL = 50.0f;
@@ -154,7 +159,8 @@ class myView extends View
 
     int currentColor = Color.BLACK;
 
-    float lastX, lastY;
+    float lastX, lastY = -1;
+    float saveFX, saveFY ;
     int selectSX, selectSY, selectTX, selectTY;
     int origSX, origSY, origW, origH;
     Path pencilPath;
@@ -312,7 +318,7 @@ class myView extends View
 
         Paint paint = new Paint();
         paint.setColor(currentColor);
-        paint.setStrokeWidth(10);
+        paint.setStrokeWidth(5);
         paint.setStrokeCap(Paint.Cap.ROUND);
         paint.setStrokeJoin(Paint.Join.ROUND);
         paint.setStyle(Paint.Style.STROKE);
@@ -360,6 +366,30 @@ class myView extends View
             {
                 deBuffer();
             }
+        }
+        else if(mode == MODE_POLYGON)
+        {
+
+                if(act == MotionEvent.ACTION_DOWN)
+                {
+                    lastX = x;
+                    lastY = y;
+                }
+                else if(act == MotionEvent.ACTION_MOVE)
+                {
+                    clearCanvas(currentCanvas);
+                    currentCanvas.drawLine(lastX, lastY, x, y, paint);
+
+                }
+                else if(act == MotionEvent.ACTION_UP)
+                {
+                    lastX = x;
+                    lastY = y;
+                    deBuffer();
+                }
+
+
+
         }
         else if(mode == MODE_RECTANGLE)
         {
