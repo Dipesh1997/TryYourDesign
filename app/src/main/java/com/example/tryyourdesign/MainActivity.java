@@ -370,23 +370,36 @@ class myView extends View
         else if(mode == MODE_POLYGON)
         {
 
-                if(act == MotionEvent.ACTION_DOWN)
-                {
-                    lastX = x;
-                    lastY = y;
-                }
-                else if(act == MotionEvent.ACTION_MOVE)
-                {
-                    clearCanvas(currentCanvas);
-                    currentCanvas.drawLine(lastX, lastY, x, y, paint);
+                    if(act == MotionEvent.ACTION_DOWN)
+                    {
+                        float xP = event.getX();
+                        float yP = event.getY();
+                        if(lastX<0)
+                        {
+                            x=xP;
+                            y=yP;
+                            lastX = x;
+                            lastY = y;
+                            saveFX = x;
+                            saveFY = y;
+                        }
 
-                }
-                else if(act == MotionEvent.ACTION_UP)
-                {
-                    lastX = x;
-                    lastY = y;
-                    deBuffer();
-                }
+                    }
+                    else if(act == MotionEvent.ACTION_MOVE)
+                    {
+                        clearCanvas(currentCanvas);
+                        currentCanvas.drawLine(lastX, lastY, x, y, paint);
+
+                    }
+                    else if(act == MotionEvent.ACTION_UP)
+                    {
+                        lastX = x;
+                        lastY = y;
+                        currentCanvas.drawLine(lastX,lastY,saveFX,saveFY,paint);
+                        deBuffer();
+                    }
+
+
 
 
 
