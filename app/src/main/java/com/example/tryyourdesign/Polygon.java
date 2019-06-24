@@ -50,7 +50,7 @@ public class Polygon extends Activity implements OnItemSelectedListener
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_polygon); //use the activity_main layout
+        setContentView(R.layout.activity_polygon); //use the activity_main2 layout
 
         paintView = (MiniPaintView)this.findViewById(R.id.paint_view); //get access to view for later
 

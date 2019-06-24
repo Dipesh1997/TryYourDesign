@@ -41,4 +41,6 @@
         <item>@raw/flower</item>
         <item>@raw/house</item>
     </string-array>
+
+    <string name="action_settings">Settings</string>
 </resources>
