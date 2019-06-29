@@ -25,7 +25,7 @@ public class AlphaDialogFragment extends DialogFragment {
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 // FIRE ZE MISSILES!
-                MainActivity act = (MainActivity)(getActivity());
+                PaintACT act = (PaintACT) (getActivity());
                 ColorPicker pk = (ColorPicker) vw.findViewById(R.id.picker);
                 int color = pk.getColor();
                 act.mv.setColor(color);
@@ -49,7 +49,7 @@ public class AlphaDialogFragment extends DialogFragment {
         picker.addSVBar(svBar);
         picker.addOpacityBar(opacityBar);
 
-        MainActivity act = (MainActivity)getActivity();
+        PaintACT act = (PaintACT) getActivity();
         picker.setOldCenterColor(act.mv.currentColor);
         picker.setColor(act.mv.currentColor);
         picker.setNewCenterColor(act.mv.currentColor);

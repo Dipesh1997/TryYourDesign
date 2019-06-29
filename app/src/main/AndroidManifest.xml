@@ -15,9 +15,12 @@
         <activity android:name=".Polygon">
 
         </activity>
-        <activity android:name=".MainActivity"
+        <activity android:name=".PaintACT"
             android:screenOrientation="landscape"
             android:configChanges="keyboardHidden|orientation">
+
+        </activity>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
