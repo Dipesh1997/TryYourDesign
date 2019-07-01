@@ -46,8 +46,6 @@ public class PaintingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_painting);
         mv = (myView2) findViewById(R.id.canvasView);
         apd = new BetaDialogFragment();
-        Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        startActivityForResult(cameraIntent, CAMERA_REQUEST);
 
     }
 

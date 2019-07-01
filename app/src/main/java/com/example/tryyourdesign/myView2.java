@@ -60,8 +60,6 @@ class myView2 extends View
     int selectSX, selectSY, selectTX, selectTY;
     int origSX, origSY, origW, origH;
     Path pencilPath;
-    private static final int CAMERA_REQUEST = 500;
-    Intent data;
 
 
     public void init()
