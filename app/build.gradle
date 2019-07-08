@@ -34,4 +34,5 @@ dependencies {
     implementation "com.android.support:support-dynamic-animation:28.0.0"
     implementation project(':cropme')
     implementation project(':drawingview')
+    implementation project(':library')
 }

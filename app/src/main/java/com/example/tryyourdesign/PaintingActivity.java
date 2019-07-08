@@ -18,25 +18,22 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Toast;
-import android.content.res.Resources;
-import android.graphics.BitmapFactory;
+import siclo.com.ezphotopicker.api.EZPhotoPick;
+import siclo.com.ezphotopicker.api.EZPhotoPickStorage;
+import siclo.com.ezphotopicker.api.models.EZPhotoPickConfig;
+import siclo.com.ezphotopicker.api.models.PhotoSource;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayDeque;
-import java.util.Date;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Random;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PaintingActivity extends AppCompatActivity {
 
     myView2 mv;
     BetaDialogFragment apd;
-    private static final int CAMERA_REQUEST = 500;
+    private static final String DEMO_PHOTO_PATH = "MyDemoPhotoDir";
+    EZPhotoPickStorage ezPhotoPickStorage;
 
 
     @Override
@@ -46,9 +43,34 @@ public class PaintingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_painting);
         mv = (myView2) findViewById(R.id.canvasView);
         apd = new BetaDialogFragment();
-
+        ezPhotoPickStorage = new EZPhotoPickStorage(this);
     }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode != RESULT_OK) {
+            return;
+        }
 
+        if (requestCode == EZPhotoPick.PHOTO_PICK_GALLERY_REQUEST_CODE) {
+            try {
+                Bitmap pickedPhoto = ezPhotoPickStorage.loadLatestStoredPhotoBitmap(1000);
+                mv.showPickedPhoto(pickedPhoto);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return;
+        }
+
+        if (requestCode == EZPhotoPick.PHOTO_PICK_CAMERA_REQUEST_CODE) {
+            try {
+                Bitmap pickedPhoto = ezPhotoPickStorage.loadLatestStoredPhotoBitmap(1000);
+                mv.showPickedPhoto(pickedPhoto);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -64,7 +86,24 @@ public class PaintingActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_gallery) {
+            EZPhotoPickConfig config = new EZPhotoPickConfig();
+            config.photoSource = PhotoSource.GALLERY;
+            config.needToExportThumbnail = false;
+            config.isAllowMultipleSelect = false;
+            config.storageDir = DEMO_PHOTO_PATH;
+            config.exportingThumbSize = 200;
+            config.exportingSize = 1000;
+            EZPhotoPick.startPhotoPickActivity(PaintingActivity.this, config);
+            return true;
+        }
+        if (id == R.id.action_camera) {
+            EZPhotoPickConfig config = new EZPhotoPickConfig();
+            config.photoSource = PhotoSource.CAMERA;
+            config.storageDir = DEMO_PHOTO_PATH;
+            config.needToAddToGallery = false;
+            config.exportingSize = 1000;
+            EZPhotoPick.startPhotoPickActivity(PaintingActivity.this, config);
             return true;
         }
 

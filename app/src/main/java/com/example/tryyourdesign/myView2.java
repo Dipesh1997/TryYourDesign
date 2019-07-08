@@ -18,6 +18,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
+import android.os.Bundle;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayDeque;
@@ -26,6 +27,14 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Random;
+import siclo.com.ezphotopicker.api.EZPhotoPick;
+import siclo.com.ezphotopicker.api.EZPhotoPickStorage;
+import siclo.com.ezphotopicker.api.models.EZPhotoPickConfig;
+import siclo.com.ezphotopicker.api.models.PhotoSource;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 class myView2 extends View
 {
@@ -60,7 +69,7 @@ class myView2 extends View
     int selectSX, selectSY, selectTX, selectTY;
     int origSX, origSY, origW, origH;
     Path pencilPath;
-
+    EZPhotoPickStorage ezPhotoPickStorage;
 
     public void init()
     {
@@ -89,7 +98,6 @@ class myView2 extends View
         super(context, attrs, defStyle);
         init();
     }
-
     public void drawCircle()
     {
         int x = 400, y = 400;
@@ -106,8 +114,19 @@ class myView2 extends View
         deBuffer();
         invalidate();
 
+
     }
 
+
+    public void showPickedPhoto(Bitmap pickedPhoto) {
+
+        Paint paint = new Paint();
+        paint.setColor(Color.parseColor("#5DCC5C"));
+        currentCanvas.drawBitmap(pickedPhoto,0,0,paint);
+        deBuffer();
+        invalidate();
+
+    }
 
     void deBuffer()
     {

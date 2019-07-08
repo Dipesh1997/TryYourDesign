@@ -60,5 +60,7 @@
     <string name="export_without_bg">exportWithoutBackground()</string>
     <string name="set_background_null">setBackgroundBitmap(null)</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_gallery">Pick Form Gallery</string>
+
+    <string name="action_camera">Pick Form Camera</string>
 </resources>

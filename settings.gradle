@@ -1,1 +1,1 @@
-include ':app', ':cropme', ':drawingview'
+include ':app', ':cropme', ':drawingview', ':library'
