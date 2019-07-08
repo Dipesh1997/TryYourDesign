@@ -64,7 +64,7 @@ public class PaintingActivity extends AppCompatActivity {
 
         if (requestCode == EZPhotoPick.PHOTO_PICK_CAMERA_REQUEST_CODE) {
             try {
-                Bitmap pickedPhoto = ezPhotoPickStorage.loadLatestStoredPhotoBitmap(1000);
+                Bitmap pickedPhoto = ezPhotoPickStorage.loadLatestStoredPhotoBitmap(700);
                 mv.showPickedPhoto(pickedPhoto);
             } catch (IOException e) {
                 e.printStackTrace();
