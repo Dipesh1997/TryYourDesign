@@ -12,30 +12,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Polygon"></activity>
-        <activity
-            android:name=".PaintACT"
-            android:configChanges="keyboardHidden|orientation"
-            android:screenOrientation="landscape">
-
-        </activity>
-        <activity
-            android:name=".PaintingActivity"
-            android:configChanges="keyboardHidden|orientation"
-            android:screenOrientation="landscape">
-
-        </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".test">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Polygon" />
+        <activity
+            android:name=".PaintACT"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".PaintingActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".MainActivity">
+
+        </activity>
+        <activity android:name=".MainActivity2">
+
+        </activity>
         <activity android:name=".HorizontalNtbActivity" />
         <activity
             android:name=".ui.activities.SplashActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activities.CropActivity"
             android:screenOrientation="portrait" />
