@@ -35,7 +35,7 @@ import siclo.com.ezphotopicker.api.models.PhotoSource;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
+import android.graphics.PorterDuffXfermode;
 class myView2 extends View
 {
     final int MODE_PENCIL = 0;
@@ -72,6 +72,7 @@ class myView2 extends View
     EZPhotoPickStorage ezPhotoPickStorage;
     Paint paint;
     private static final int LAYER_FLAGS = Canvas.ALL_SAVE_FLAG;
+    PorterDuffXfermode xfermode = new PorterDuffXfermode(PorterDuff.Mode.SRC_IN);
     public void init()
     {
         Log.d("Debug", "INITTTTTTT!!!");
@@ -127,9 +128,9 @@ class myView2 extends View
 
         paint = new Paint();
         paint.setColor(Color.parseColor("#5DCC5C"));
-        currentCanvas.saveLayerAlpha(0, 0, 1000, 700, 0x50, LAYER_FLAGS);
+        currentCanvas.saveLayerAlpha(0, 0, getRight(), getBottom(), 0x50, LAYER_FLAGS);
         currentCanvas.drawBitmap(pickedPhoto,0,0,paint);
-
+        paint.setXfermode(xfermode);
         currentCanvas.restore();
 
         deBuffer();
