@@ -70,7 +70,8 @@ class myView2 extends View
     int origSX, origSY, origW, origH;
     Path pencilPath;
     EZPhotoPickStorage ezPhotoPickStorage;
-
+    Paint paint;
+    private static final int LAYER_FLAGS = Canvas.ALL_SAVE_FLAG;
     public void init()
     {
         Log.d("Debug", "INITTTTTTT!!!");
@@ -84,6 +85,8 @@ class myView2 extends View
     public myView2(Context context)
     {
         super(context);
+        setFocusable(true);
+        paint.setAntiAlias(true);
         init();
     }
 
@@ -110,7 +113,9 @@ class myView2 extends View
         Log.d("Debug", "" + getDrawingTime());
         res = getResources();
         Bitmap bitmap = BitmapFactory.decodeResource(res, R.drawable.ic_eighth);
+        currentCanvas.save();
         currentCanvas.drawBitmap(bitmap, 20, 50, paint);
+        currentCanvas.restore();
         deBuffer();
         invalidate();
 
@@ -120,9 +125,13 @@ class myView2 extends View
 
     public void showPickedPhoto(Bitmap pickedPhoto) {
 
-        Paint paint = new Paint();
+        paint = new Paint();
         paint.setColor(Color.parseColor("#5DCC5C"));
+        currentCanvas.saveLayerAlpha(0, 0, 1000, 700, 0x50, LAYER_FLAGS);
         currentCanvas.drawBitmap(pickedPhoto,0,0,paint);
+
+        currentCanvas.restore();
+
         deBuffer();
         invalidate();
 

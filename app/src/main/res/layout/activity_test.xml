@@ -41,5 +41,10 @@
         android:layout_height="wrap_content"
         android:text="SplashActivity"
         android:onClick="onSplashActivity"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test2"
+        android:onClick="ontest2"/>
 
 </LinearLayout>

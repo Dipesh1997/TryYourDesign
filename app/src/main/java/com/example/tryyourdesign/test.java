@@ -49,4 +49,10 @@ public class test extends AppCompatActivity {
         Intent intent = new Intent(test.this, SplashActivity.class);
         startActivity(intent);
     }
+
+    public void ontest2(View view)
+    {
+        Intent intent = new Intent(test.this, test2.class);
+        startActivity(intent);
+    }
 }
