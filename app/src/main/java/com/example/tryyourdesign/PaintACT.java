@@ -22,6 +22,8 @@ import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Deque;
 import java.util.LinkedList;
@@ -154,16 +156,18 @@ class myView extends View
     int Width;
     int Height;
     boolean resized = false;
-    int mode = MODE_PENCIL;
+    int mode = MODE_POLYGON;
     boolean select_selected;
 
     int currentColor = Color.BLACK;
 
-    float lastX, lastY = -1;
+    float lastX, lastY;
     float saveFX, saveFY ;
     int selectSX, selectSY, selectTX, selectTY;
     int origSX, origSY, origW, origH;
     Path pencilPath;
+    int poi;
+
 
 
     public void init()
@@ -315,6 +319,7 @@ class myView extends View
         float x = event.getX();
         float y = event.getY();
         int act = event.getAction();
+        final ArrayList<Float> list = new ArrayList<>();
 
         Paint paint = new Paint();
         paint.setColor(currentColor);
@@ -372,31 +377,22 @@ class myView extends View
 
                     if(act == MotionEvent.ACTION_DOWN)
                     {
-                        float xP = event.getX();
-                        float yP = event.getY();
-                        if(lastX<0)
-                        {
-                            x=xP;
-                            y=yP;
+
                             lastX = x;
                             lastY = y;
-                            saveFX = x;
-                            saveFY = y;
-                        }
+                            saveFX = lastX;
+                            saveFY = lastY;
+                            currentCanvas.drawPoint(x,y,paint);
+
 
                     }
                     else if(act == MotionEvent.ACTION_MOVE)
                     {
-                        clearCanvas(currentCanvas);
-                        currentCanvas.drawLine(lastX, lastY, x, y, paint);
 
                     }
                     else if(act == MotionEvent.ACTION_UP)
                     {
-                        lastX = x;
-                        lastY = y;
-                        currentCanvas.drawLine(lastX,lastY,saveFX,saveFY,paint);
-                        deBuffer();
+
                     }
 
 
