@@ -1,7 +1,6 @@
 package com.example.tryyourdesign;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -18,7 +17,6 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
-import android.os.Bundle;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayDeque;
@@ -27,14 +25,9 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Random;
-import siclo.com.ezphotopicker.api.EZPhotoPick;
-import siclo.com.ezphotopicker.api.EZPhotoPickStorage;
-import siclo.com.ezphotopicker.api.models.EZPhotoPickConfig;
-import siclo.com.ezphotopicker.api.models.PhotoSource;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import siclo.com.ezphotopicker.api.EZPhotoPickStorage;
+
 import android.graphics.PorterDuffXfermode;
 class myView2 extends View
 {
@@ -61,7 +54,7 @@ class myView2 extends View
     boolean resized = false;
     int mode = MODE_PENCIL;
     boolean select_selected;
-
+    int temp;
     int currentColor = Color.BLACK;
 
     float lastX, lastY = -1;
@@ -72,7 +65,7 @@ class myView2 extends View
     EZPhotoPickStorage ezPhotoPickStorage;
     Paint paint;
     private static final int LAYER_FLAGS = Canvas.ALL_SAVE_FLAG;
-    PorterDuffXfermode xfermode = new PorterDuffXfermode(PorterDuff.Mode.SRC_IN);
+    PorterDuffXfermode xfermode = new PorterDuffXfermode(PorterDuff.Mode.CLEAR);
     public void init()
     {
         Log.d("Debug", "INITTTTTTT!!!");
@@ -127,14 +120,13 @@ class myView2 extends View
     public void showPickedPhoto(Bitmap pickedPhoto) {
 
         paint = new Paint();
-        paint.setColor(Color.parseColor("#5DCC5C"));
-        currentCanvas.saveLayerAlpha(0, 0, getRight(), getBottom(), 0x50, LAYER_FLAGS);
+        currentCanvas.save();
+        currentCanvas.saveLayerAlpha(0, 0, currentCanvas.getWidth(), currentCanvas.getHeight(), 0x99, LAYER_FLAGS);
         currentCanvas.drawBitmap(pickedPhoto,0,0,paint);
         paint.setXfermode(xfermode);
         currentCanvas.restore();
-
-        deBuffer();
         invalidate();
+        deBuffer();
 
     }
 
@@ -251,7 +243,7 @@ class myView2 extends View
         paint.setStrokeWidth(5);
         paint.setStrokeCap(Paint.Cap.ROUND);
         paint.setStrokeJoin(Paint.Join.ROUND);
-        paint.setStyle(Paint.Style.STROKE);
+        paint.setStyle(Paint.Style.FILL_AND_STROKE);
 
         if(mode == MODE_PENCIL)
         {
@@ -345,6 +337,7 @@ class myView2 extends View
             {
                 clearCanvas(currentCanvas);
                 currentCanvas.drawRect(lastX, lastY, x, y, paint);
+
             }
             else if(act == MotionEvent.ACTION_UP)
             {
