@@ -52,10 +52,10 @@ class myView2 extends View
     int Width;
     int Height;
     boolean resized = false;
-    int mode = MODE_PENCIL;
+    int mode = MODE_RECTANGLE;
     boolean select_selected;
     int temp;
-    int currentColor = Color.BLACK;
+    int currentColor = Color.BLUE;
 
     float lastX, lastY = -1;
     float saveFX, saveFY ;
@@ -121,7 +121,7 @@ class myView2 extends View
 
         paint = new Paint();
         currentCanvas.save();
-        currentCanvas.saveLayerAlpha(0, 0, currentCanvas.getWidth(), currentCanvas.getHeight(), 0x99, LAYER_FLAGS);
+        //currentCanvas.saveLayerAlpha(0, 0, currentCanvas.getWidth(), currentCanvas.getHeight(), 0x99, LAYER_FLAGS);
         currentCanvas.drawBitmap(pickedPhoto,0,0,paint);
         paint.setXfermode(xfermode);
         currentCanvas.restore();

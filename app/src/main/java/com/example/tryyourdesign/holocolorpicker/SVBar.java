@@ -185,10 +185,10 @@ public class SVBar extends View {
 		mBarPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 		mBarPaint.setShader(shader);
 
-		mBarPointerPosition = (mBarLength / 2) + mBarPointerHaloRadius;
+		mBarPointerPosition = (mBarLength / 4) + mBarPointerHaloRadius;
 
 		mBarPointerHaloPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-		mBarPointerHaloPaint.setColor(Color.BLACK);
+		mBarPointerHaloPaint.setColor(Color.BLUE);
 		mBarPointerHaloPaint.setAlpha(0x50);
 
 		mBarPointerPaint = new Paint(Paint.ANTI_ALIAS_FLAG);

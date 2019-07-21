@@ -210,7 +210,7 @@ public class ValueBar extends View {
 		mBarPointerPosition = mBarPointerHaloRadius;
 
 		mBarPointerHaloPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-		mBarPointerHaloPaint.setColor(Color.BLACK);
+		mBarPointerHaloPaint.setColor(Color.BLUE);
 		mBarPointerHaloPaint.setAlpha(0x50);
 
 		mBarPointerPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
