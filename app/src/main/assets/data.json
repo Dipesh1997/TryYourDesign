@@ -1,0 +1,20 @@
+{
+	"colorEntry": [
+	{
+		"colorName": "AP L101 Swan Wing",
+		"RGB8": {
+				"red": "245",
+				"green": "241",
+				"blue": "229"
+				}
+	},
+	{
+		"colorName": "AP L102 Milky Way",
+		"RGB8": {
+				"red": "243",
+				"green": "239",
+				"blue": "228"
+				}
+	}
+	]
+}
