@@ -55,4 +55,9 @@ public class test extends AppCompatActivity {
         Intent intent = new Intent(test.this, test2.class);
         startActivity(intent);
     }
+    public void colors(View view)
+    {
+        Intent intent = new Intent(test.this, Colors.class);
+        startActivity(intent);
+    }
 }
