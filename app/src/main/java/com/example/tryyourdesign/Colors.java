@@ -18,7 +18,9 @@ public class Colors extends AppCompatActivity {
 
     // ArrayList for person names, email Id's and mobile numbers
     ArrayList<String> personNames = new ArrayList<>();
-    ArrayList<String> mobileNumbers = new ArrayList<>();
+    ArrayList<String> red = new ArrayList<>();
+    ArrayList<String> green = new ArrayList<>();
+    ArrayList<String> blue = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,14 +46,16 @@ public class Colors extends AppCompatActivity {
                 // create a object for getting contact data from JSONObject
                 JSONObject contact = userDetail.getJSONObject("RGB8");
                 // fetch mobile number and store it in arraylist
-                mobileNumbers.add(contact.getString("red"));
+                red.add(contact.getString("red"));
+                green.add(contact.getString("green"));
+                blue.add(contact.getString("blue"));
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
         //  call the constructor of CustomAdapter to send the reference and data to Adapter
-        CustomAdapter customAdapter = new CustomAdapter(Colors.this, personNames, mobileNumbers);
+        CustomAdapter customAdapter = new CustomAdapter(Colors.this, personNames, red, green, blue);
         recyclerView.setAdapter(customAdapter); // set the Adapter to RecyclerView
     }
 

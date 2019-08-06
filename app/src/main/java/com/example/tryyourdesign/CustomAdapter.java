@@ -1,6 +1,7 @@
 package com.example.tryyourdesign;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,13 +15,17 @@ import java.util.ArrayList;
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
 
     ArrayList<String> personNames;
-    ArrayList<String> mobileNumbers;
+    ArrayList<String> red;
+    ArrayList<String> green;
+    ArrayList<String> blue;
     Context context;
 
-    public CustomAdapter(Context context, ArrayList<String> personNames, ArrayList<String> mobileNumbers) {
+    public CustomAdapter(Context context, ArrayList<String> personNames, ArrayList<String> red, ArrayList<String> green, ArrayList<String> blue) {
         this.context = context;
         this.personNames = personNames;
-        this.mobileNumbers = mobileNumbers;
+        this.red = red;
+        this.green = green;
+        this.blue = blue;
     }
 
     @Override
@@ -35,12 +40,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     public void onBindViewHolder(MyViewHolder holder, final int position) {
         // set the data in items
         holder.name.setText(personNames.get(position));
+        holder.viewColor.setBackgroundColor(Color.rgb(200, 00, 00));
         // implement setOnClickListener event on item view.
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // display a toast with person name on item click
-                Toast.makeText(context, personNames.get(position), Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, personNames.get(position)+" "+red.get(position), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -53,6 +59,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
+        View viewColor;
         TextView name;// init the item view's
 
         public MyViewHolder(View itemView) {
@@ -60,6 +67,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
             // get the reference of item view's
             name = (TextView) itemView.findViewById(R.id.name);
+            viewColor = (View) itemView.findViewById(R.id.viewColor);
 
         }
     }
