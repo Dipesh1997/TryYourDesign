@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="0dp">
         <!--
         items for a single row of RecyclerView
         -->
@@ -22,13 +22,18 @@
             android:layout_height="wrap_content"
             android:text="Name"
             android:textColor="#000"
-            android:textSize="20sp" />
-        <View
-            android:layout_width="48dp"
-            android:clickable="true"
-            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_weight="3"/>
+
+        <TextView
             android:id="@+id/viewColor"
-            android:background="#2196F3" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#2196F3"
+            android:gravity="right"
+            android:layout_weight="2"
+            android:layout_margin="0dp"
+            android:padding="0dp"/>
 
     </LinearLayout>
 </android.support.v7.widget.CardView>

@@ -15,6 +15,471 @@
 				"green": "239",
 				"blue": "228"
 				}
-	}
+	},
+      {
+        "colorName": "AP L103 Pearl Star",
+        "RGB8": {
+          "red": "243",
+          "green": "239",
+          "blue": "228"
+        }
+      },
+      {
+        "colorName": "AP L104 Cotton Wool",
+        "RGB8": {
+          "red": "242",
+          "green": "240",
+          "blue": "231"
+        }
+      },
+      {
+        "colorName": "AP 0765 Morning Glory",
+        "RGB8": {
+          "red": "240",
+          "green": "238",
+          "blue": "230"
+        }
+      },
+      {
+        "colorName": "AP L105 Crystal Peak",
+        "RGB8": {
+          "red": "243",
+          "green": "240",
+          "blue": "231"
+        }
+      },
+      {
+        "colorName": "AP L107 Virgin Lace",
+        "RGB8": {
+          "red": "238",
+          "green": "233",
+          "blue": "229"
+        }
+      },
+      {
+        "colorName": "AP L108 Cream Pudding",
+        "RGB8": {
+          "red": "234",
+          "green": "236",
+          "blue": "230"
+        }
+      },
+      {
+        "colorName": "AP 0763 Iceland",
+        "RGB8": {
+          "red": "235",
+          "green": "238",
+          "blue": "232"
+        }
+      },
+      {
+        "colorName": "AP L109 Icy Peak",
+        "RGB8": {
+          "red": "231",
+          "green": "231",
+          "blue": "223"
+        }
+      },
+      {
+        "colorName": "AP L111 Sheer Ice",
+        "RGB8": {
+          "red": "228",
+          "green": "235",
+          "blue": "230"
+        }
+      },
+      {
+        "colorName": "AP L112 White Echo",
+        "RGB8": {
+          "red": "235",
+          "green": "241",
+          "blue": "233"
+        }
+      },
+      {
+        "colorName": "AP L113 Seagull Point",
+        "RGB8": {
+          "red": "231",
+          "green": "241",
+          "blue": "232"
+        }
+      },
+      {
+        "colorName": "AP L114 Aqua Hint",
+        "RGB8": {
+          "red": "222",
+          "green": "238",
+          "blue": "235"
+        }
+      },
+      {
+        "colorName": "AP L115 White Bisque",
+        "RGB8": {
+          "red": "224",
+          "green": "237",
+          "blue": "229"
+        }
+      },
+      {
+        "colorName": "AP L116 Menthol",
+        "RGB8": {
+          "red": "231",
+          "green": "241",
+          "blue": "230"
+        }
+      },
+      {
+        "colorName": "AP L117 Mint Essence",
+        "RGB8": {
+          "red": "231",
+          "green": "240",
+          "blue": "230"
+        }
+      },
+      {
+        "colorName": "AP L118 Water Spray",
+        "RGB8": {
+          "red": "237",
+          "green": "242",
+          "blue": "232"
+        }
+      },
+      {
+        "colorName": "AP L119 White Satin",
+        "RGB8": {
+          "red": "237",
+          "green": "241",
+          "blue": "231"
+        }
+      },
+      {
+        "colorName": "AP L120 Mint Lustre",
+        "RGB8": {
+          "red": "239",
+          "green": "241",
+          "blue": "228"
+        }
+      },
+      {
+        "colorName": "AP L121 Moonlight",
+        "RGB8": {
+          "red": "245",
+          "green": "242",
+          "blue": "226"
+        }
+      },
+      {
+        "colorName": "AP L122 Skimmed Cream",
+        "RGB8": {
+          "red": "245",
+          "green": "242",
+          "blue": "231"
+        }
+      },
+      {
+        "colorName": "AP L123 Angel Cloud",
+        "RGB8": {
+          "red": "245",
+          "green": "241",
+          "blue": "229"
+        }
+      },
+      {
+        "colorName": "AP L124 Pure Ivory",
+        "RGB8": {
+          "red": "245",
+          "green": "241",
+          "blue": "225"
+        }
+      },
+      {
+        "colorName": "AP 0307 Cream",
+        "RGB8": {
+          "red": "240",
+          "green": "230",
+          "blue": "203"
+        }
+      },
+      {
+        "colorName": "AP L125 Silver Comet",
+        "RGB8": {
+          "red": "248",
+          "green": "243",
+          "blue": "227"
+        }
+      },
+      {
+        "colorName": "AP L126 Sugared Nut",
+        "RGB8": {
+          "red": "248",
+          "green": "242",
+          "blue": "225"
+        }
+      },
+      {
+        "colorName": "AP L127 Sesame Seed",
+        "RGB8": {
+          "red": "239",
+          "green": "231",
+          "blue": "210"
+        }
+      },
+      {
+        "colorName": "AP 3203 Puppy Love",
+        "RGB8": {
+          "red": "238",
+          "green": "226",
+          "blue": "202"
+        }
+      },
+      {
+        "colorName": "AP L129 Cold Coffee",
+        "RGB8": {
+          "red": "231",
+          "green": "217",
+          "blue": "192"
+        }
+      },
+      {
+        "colorName": "AP L131 Lovely Lace",
+        "RGB8": {
+          "red": "238",
+          "green": "228",
+          "blue": "205"
+        }
+      },
+      {
+        "colorName": "AP L132 Natural Linen",
+        "RGB8": {
+          "red": "240",
+          "green": "233",
+          "blue": "215"
+        }
+      },
+      {
+        "colorName": "AP L133 Arabian Sand",
+        "RGB8": {
+          "red": "243",
+          "green": "236",
+          "blue": "216"
+        }
+      },
+      {
+        "colorName": "AP L134 Double Cream",
+        "RGB8": {
+          "red": "242",
+          "green": "238",
+          "blue": "223"
+        }
+      },
+      {
+        "colorName": "AP L135 Sahara Dream",
+        "RGB8": {
+          "red": "233",
+          "green": "224",
+          "blue": "206"
+        }
+      },
+      {
+        "colorName": "AP L136 Pebble White",
+        "RGB8": {
+          "red": "241",
+          "green": "234",
+          "blue": "219"
+        }
+      },
+      {
+        "colorName": "AP 0952 Soft Glow",
+        "RGB8": {
+          "red": "234",
+          "green": "226",
+          "blue": "213"
+        }
+      },
+      {
+        "colorName": "AP L138 Snow Blush",
+        "RGB8": {
+          "red": "245",
+          "green": "236",
+          "blue": "222"
+        }
+      },
+      {
+        "colorName": "AP L139 Blush",
+        "RGB8": {
+          "red": "250",
+          "green": "238",
+          "blue": "228"
+        }
+      },
+      {
+        "colorName": "AP L140 Crushed Ice",
+        "RGB8": {
+          "red": "244",
+          "green": "237",
+          "blue": "225"
+        }
+      },
+      {
+        "colorName": "AP L141 South Pole",
+        "RGB8": {
+          "red": "247",
+          "green": "240",
+          "blue": "229"
+        }
+      },
+      {
+        "colorName": "AP L142 Mica Matte",
+        "RGB8": {
+          "red": "243",
+          "green": "236",
+          "blue": "229"
+        }
+      },
+      {
+        "colorName": "AP L143 Rain Drop",
+        "RGB8": {
+          "red": "247",
+          "green": "242",
+          "blue": "233"
+        }
+      },
+      {
+        "colorName": "AP L144 Love Song",
+        "RGB8": {
+          "red": "245",
+          "green": "241",
+          "blue": "232"
+        }
+      },
+      {
+        "colorName": "AP L145 White Cameo",
+        "RGB8": {
+          "red": "247",
+          "green": "241",
+          "blue": "234"
+        }
+      },
+      {
+        "colorName": "AP L146 Sonnet",
+        "RGB8": {
+          "red": "247",
+          "green": "243",
+          "blue": "236"
+        }
+      },
+      {
+        "colorName": "AP L147 Harmony",
+        "RGB8": {
+          "red": "241",
+          "green": "235",
+          "blue": "224"
+        }
+      },
+      {
+        "colorName": "AP L148 Blossom Tint",
+        "RGB8": {
+          "red": "245",
+          "green": "240",
+          "blue": "229"
+        }
+      },
+      {
+        "colorName": "AP L149 Eggshell",
+        "RGB8": {
+          "red": "240",
+          "green": "237",
+          "blue": "224"
+        }
+      },
+      {
+        "colorName": "AP L150 Pressed Linen",
+        "RGB8": {
+          "red": "247",
+          "green": "243",
+          "blue": "232"
+        }
+      },
+      {
+        "colorName": "AP L151 Raw Jute",
+        "RGB8": {
+          "red": "244",
+          "green": "239",
+          "blue": "226"
+        }
+      },
+      {
+        "colorName": "AP L152 Cream Pie",
+        "RGB8": {
+          "red": "247",
+          "green": "246",
+          "blue": "237"
+        }
+      },
+      {
+        "colorName": "AP L153 Pristine Linen",
+        "RGB8": {
+          "red": "241",
+          "green": "240",
+          "blue": "227"
+        }
+      },
+      {
+        "colorName": "AP L154 Pipe Dream",
+        "RGB8": {
+          "red": "246",
+          "green": "244",
+          "blue": "234"
+        }
+      },
+      {
+        "colorName": "AP L155 Pale Sisal",
+        "RGB8": {
+          "red": "246",
+          "green": "245",
+          "blue": "235"
+        }
+      },
+      {
+        "colorName": "AP L156 Almost Ivory",
+        "RGB8": {
+          "red": "243",
+          "green": "239",
+          "blue": "227"
+        }
+      },
+      {
+        "colorName": "AP L157 White Canvas",
+        "RGB8": {
+          "red": "240",
+          "green": "235",
+          "blue": "224"
+        }
+      },
+      {
+        "colorName": "AP L158 Silence",
+        "RGB8": {
+          "red": "240",
+          "green": "235",
+          "blue": "225"
+        }
+      },
+      {
+        "colorName": "AP L159 Dreamy Night",
+        "RGB8": {
+          "red": "233",
+          "green": "229",
+          "blue": "216"
+        }
+      },
+      {
+        "colorName": "AP L160 Soft Silk",
+        "RGB8": {
+          "red": "239",
+          "green": "233",
+          "blue": "221"
+        }
+      }
+
 	]
 }

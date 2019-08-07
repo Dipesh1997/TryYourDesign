@@ -40,7 +40,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     public void onBindViewHolder(MyViewHolder holder, final int position) {
         // set the data in items
         holder.name.setText(personNames.get(position));
-        holder.viewColor.setBackgroundColor(Color.rgb(200, 00, 00));
+        int redC=Integer.parseInt(red.get(position));
+        int greenC=Integer.parseInt(green.get(position));
+        int blueC=Integer.parseInt(blue.get(position));
+        holder.viewColor.setBackgroundColor(Color.rgb(redC, greenC, blueC));
         // implement setOnClickListener event on item view.
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +62,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        View viewColor;
+        TextView viewColor;
         TextView name;// init the item view's
 
         public MyViewHolder(View itemView) {
@@ -67,7 +70,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
             // get the reference of item view's
             name = (TextView) itemView.findViewById(R.id.name);
-            viewColor = (View) itemView.findViewById(R.id.viewColor);
+            viewColor = (TextView) itemView.findViewById(R.id.viewColor);
 
         }
     }
