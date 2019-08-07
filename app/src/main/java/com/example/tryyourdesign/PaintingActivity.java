@@ -19,6 +19,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
+
 import siclo.com.ezphotopicker.api.EZPhotoPick;
 import siclo.com.ezphotopicker.api.EZPhotoPickStorage;
 import siclo.com.ezphotopicker.api.models.EZPhotoPickConfig;
@@ -44,6 +46,14 @@ public class PaintingActivity extends AppCompatActivity {
         mv = (myView2) findViewById(R.id.canvasView);
         apd = new BetaDialogFragment();
         ezPhotoPickStorage = new EZPhotoPickStorage(this);
+        Bundle bundle = getIntent().getExtras();
+        String colorName = bundle.getString("colorName");
+        int red = bundle.getInt("red");
+        int green = bundle.getInt("green");
+        int blue = bundle.getInt("blue");
+        mv.setColor(Color.rgb(red, green, blue));
+        Toast.makeText(getApplicationContext(),colorName,Toast.LENGTH_SHORT).show();
+
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
